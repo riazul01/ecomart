@@ -18,6 +18,8 @@ import Paper from './components/surfaces/Paper';
 import Link from './components/navigation/Link';
 import List from './components/list/List';
 import Collapse from './components/list/Collapse';
+import ListItemButton from './components/list/ListItemButton';
+import ListItemIcon from './components/list/ListItemIcon';
 
 export const theme = createTheme({
   palette,
@@ -41,6 +43,8 @@ export const theme = createTheme({
 
     MuiList: List,
     MuiCollapse: Collapse,
+    MuiListItemButton: ListItemButton,
+    MuiListItemIcon: ListItemIcon,
 
     MuiChip: Chip,
     MuiBadge: Badge,
