@@ -15,6 +15,7 @@ import InputAdornment from './components/inputs/InputAdornment';
 import Select from './components/inputs/Select';
 import Stack from './components/layout/Stack';
 import Paper from './components/surfaces/Paper';
+import Link from './components/navigation/Link';
 
 export const theme = createTheme({
   palette,
@@ -34,8 +35,10 @@ export const theme = createTheme({
     MuiInputAdornment: InputAdornment,
     MuiSelect: Select,
 
-    MuiBadge: Badge,
+    MuiLink: Link,
+    
     MuiChip: Chip,
+    MuiBadge: Badge,
 
     MuiCssBaseline: CssBaseline,
   },
