@@ -6,12 +6,12 @@ import Button from './components/button/Button';
 import ButtonBase from './components/button/ButtonBase';
 import IconButton from './components/button/IconButton';
 import Toolbar from './components/button/Toolbar';
-import Badge from './components/data-display/Badge';
 import Chip from './components/data-display/Chip';
+import Badge from './components/data-display/Badge';
 import FilledInput from './components/inputs/FilledIntpu';
 import OutlinedInput from './components/inputs/OutlinedInput';
-import InputBase from './components/inputs/InputBase';
 import InputAdornment from './components/inputs/InputAdornment';
+import InputBase from './components/inputs/InputBase';
 import Select from './components/inputs/Select';
 import Stack from './components/layout/Stack';
 import Paper from './components/surfaces/Paper';
@@ -29,6 +29,7 @@ export const theme = createTheme({
   components: {
     MuiStack: Stack,
     MuiPaper: Paper,
+    MuiLink: Link,
 
     MuiButton: Button,
     MuiButtonBase: ButtonBase,
@@ -40,8 +41,6 @@ export const theme = createTheme({
     MuiInputBase: InputBase,
     MuiInputAdornment: InputAdornment,
     MuiSelect: Select,
-
-    MuiLink: Link,
 
     MuiList: List,
     MuiCollapse: Collapse,
