@@ -17,6 +17,7 @@ import Stack from './components/layout/Stack';
 import Paper from './components/surfaces/Paper';
 import Link from './components/navigation/Link';
 import List from './components/list/List';
+import Collapse from './components/list/Collapse';
 
 export const theme = createTheme({
   palette,
@@ -39,6 +40,7 @@ export const theme = createTheme({
     MuiLink: Link,
 
     MuiList: List,
+    MuiCollapse: Collapse,
 
     MuiChip: Chip,
     MuiBadge: Badge,
