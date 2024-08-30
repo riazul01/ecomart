@@ -8,6 +8,7 @@ import IconButton from './components/button/IconButton';
 import Toolbar from './components/button/Toolbar';
 import Badge from './components/data-display/Badge';
 import Chip from './components/data-display/Chip';
+import FilledInput from './components/inputs/FilledIntpu';
 
 export const theme = createTheme({
   palette,
@@ -17,6 +18,8 @@ export const theme = createTheme({
     MuiButtonBase: ButtonBase,
     MuiIconButton: IconButton,
     MuiToolbar: Toolbar,
+
+    MuiFilledInput: FilledInput,
 
     MuiBadge: Badge,
     MuiChip: Chip,
