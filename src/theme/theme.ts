@@ -16,6 +16,7 @@ import Select from './components/inputs/Select';
 import Stack from './components/layout/Stack';
 import Paper from './components/surfaces/Paper';
 import Link from './components/navigation/Link';
+import List from './components/list/List';
 
 export const theme = createTheme({
   palette,
@@ -36,7 +37,9 @@ export const theme = createTheme({
     MuiSelect: Select,
 
     MuiLink: Link,
-    
+
+    MuiList: List,
+
     MuiChip: Chip,
     MuiBadge: Badge,
 
