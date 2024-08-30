@@ -12,6 +12,7 @@ import FilledInput from './components/inputs/FilledIntpu';
 import OutlinedInput from './components/inputs/OutlinedInput';
 import InputBase from './components/inputs/InputBase';
 import InputAdornment from './components/inputs/InputAdornment';
+import Select from './components/inputs/Select';
 
 export const theme = createTheme({
   palette,
@@ -26,6 +27,7 @@ export const theme = createTheme({
     MuiOutlinedInput: OutlinedInput,
     MuiInputBase: InputBase,
     MuiInputAdornment: InputAdornment,
+    MuiSelect: Select,
 
     MuiBadge: Badge,
     MuiChip: Chip,
