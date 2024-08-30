@@ -13,11 +13,14 @@ import OutlinedInput from './components/inputs/OutlinedInput';
 import InputBase from './components/inputs/InputBase';
 import InputAdornment from './components/inputs/InputAdornment';
 import Select from './components/inputs/Select';
+import Stack from './components/layout/Stack';
 
 export const theme = createTheme({
   palette,
   typography,
   components: {
+    MuiStack: Stack,
+    
     MuiButton: Button,
     MuiButtonBase: ButtonBase,
     MuiIconButton: IconButton,
