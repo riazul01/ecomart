@@ -6,6 +6,7 @@ import Button from './components/button/Button';
 import ButtonBase from './components/button/ButtonBase';
 import IconButton from './components/button/IconButton';
 import Toolbar from './components/button/Toolbar';
+import Badge from './components/data-display/Badge';
 
 export const theme = createTheme({
   palette,
@@ -15,6 +16,8 @@ export const theme = createTheme({
     MuiButtonBase: ButtonBase,
     MuiIconButton: IconButton,
     MuiToolbar: Toolbar,
+
+    MuiBadge: Badge,
 
     MuiCssBaseline: CssBaseline,
   },
