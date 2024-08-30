@@ -9,6 +9,7 @@ import Toolbar from './components/button/Toolbar';
 import Badge from './components/data-display/Badge';
 import Chip from './components/data-display/Chip';
 import FilledInput from './components/inputs/FilledIntpu';
+import OutlinedInput from './components/inputs/OutlinedInput';
 
 export const theme = createTheme({
   palette,
@@ -20,6 +21,7 @@ export const theme = createTheme({
     MuiToolbar: Toolbar,
 
     MuiFilledInput: FilledInput,
+    MuiOutlinedInput: OutlinedInput,
 
     MuiBadge: Badge,
     MuiChip: Chip,
