@@ -14,7 +14,7 @@ const Paper: Components<Omit<Theme, 'components'>>['MuiPaper'] = {
         padding: '0 !important',
         background: theme.palette.info.lighter,
         borderRadius: theme.shape.borderRadius * 1.5,
-        // boxShadow: theme.customShadows[0],
+        boxShadow: theme.customShadows[0],
 
         '& .MuiList-root': {
           padding: theme.spacing(1),

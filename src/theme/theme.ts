@@ -1,6 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 import palette from './palette';
 import typography from './typography';
+import customShadows from './shadows';
 import CssBaseline from './components/utils/CssBaseline';
 import Button from './components/button/Button';
 import ButtonBase from './components/button/ButtonBase';
@@ -26,6 +27,7 @@ import MenuItem from './components/list/MenuItem';
 export const theme = createTheme({
   palette,
   typography,
+  customShadows,
   components: {
     MuiStack: Stack,
     MuiPaper: Paper,
