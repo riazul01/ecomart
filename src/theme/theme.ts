@@ -11,6 +11,7 @@ import Chip from './components/data-display/Chip';
 import FilledInput from './components/inputs/FilledIntpu';
 import OutlinedInput from './components/inputs/OutlinedInput';
 import InputBase from './components/inputs/InputBase';
+import InputAdornment from './components/inputs/InputAdornment';
 
 export const theme = createTheme({
   palette,
@@ -24,6 +25,7 @@ export const theme = createTheme({
     MuiFilledInput: FilledInput,
     MuiOutlinedInput: OutlinedInput,
     MuiInputBase: InputBase,
+    MuiInputAdornment: InputAdornment,
 
     MuiBadge: Badge,
     MuiChip: Chip,
