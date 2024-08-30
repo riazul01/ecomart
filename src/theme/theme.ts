@@ -20,6 +20,7 @@ import List from './components/list/List';
 import Collapse from './components/list/Collapse';
 import ListItemButton from './components/list/ListItemButton';
 import ListItemIcon from './components/list/ListItemIcon';
+import ListItemText from './components/list/ListItemText';
 
 export const theme = createTheme({
   palette,
@@ -45,6 +46,7 @@ export const theme = createTheme({
     MuiCollapse: Collapse,
     MuiListItemButton: ListItemButton,
     MuiListItemIcon: ListItemIcon,
+    MuiListItemText: ListItemText,
 
     MuiChip: Chip,
     MuiBadge: Badge,
