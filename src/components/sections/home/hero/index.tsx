@@ -1,6 +1,7 @@
 import Stack from '@mui/material/Stack';
 import MainBannar from './MainBannar';
 import SummarSale from './SummarSale';
+import BestDeal from './BestDeal';
 
 const Hero = () => {
   return (
@@ -8,6 +9,7 @@ const Hero = () => {
       <MainBannar />
       <Stack spacing={2.5} direction="column" flex={1} minWidth={320}>
         <SummarSale />
+        <BestDeal />
       </Stack>
     </Stack>
   );
