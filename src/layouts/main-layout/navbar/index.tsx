@@ -1,7 +1,6 @@
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
-import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -16,7 +15,7 @@ interface NavbarProps {
 const Navbar = ({ toggleDrawer }: NavbarProps) => {
   return (
     <Box width={1} bgcolor="neutral.main" zIndex={1200}>
-      <AppBar
+      <Box
         component="nav"
         sx={{
           mx: 'auto',
@@ -71,7 +70,7 @@ const Navbar = ({ toggleDrawer }: NavbarProps) => {
             </Typography>
           </Stack>
         </Toolbar>
-      </AppBar>
+      </Box>
     </Box>
   );
 };
