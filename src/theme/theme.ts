@@ -23,6 +23,11 @@ import ListItemButton from './components/list/ListItemButton';
 import ListItemIcon from './components/list/ListItemIcon';
 import ListItemText from './components/list/ListItemText';
 import MenuItem from './components/list/MenuItem';
+import Card from './components/cards/Card';
+import CardActions from './components/cards/CardActions';
+import CardContent from './components/cards/CardContent';
+import CardHeader from './components/cards/CardHeader';
+import CardMedia from './components/cards/CardMedia';
 
 export const theme = createTheme({
   palette,
@@ -53,6 +58,12 @@ export const theme = createTheme({
 
     MuiChip: Chip,
     MuiBadge: Badge,
+
+    MuiCard: Card,
+    MuiCardMedia: CardMedia,
+    MuiCardHeader: CardHeader,
+    MuiCardContent: CardContent,
+    MuiCardActions: CardActions,
 
     MuiCssBaseline: CssBaseline,
   },
