@@ -10,6 +10,7 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import IconifyIcon from 'components/base/IconifyIcon';
 import CabbageImage from 'assets/images/cabbage.png';
+import { Link } from '@mui/material';
 
 const ProductCard = () => {
   const addedToCart = false;
@@ -19,9 +20,10 @@ const ProductCard = () => {
       sx={{
         position: 'relative',
         width: 1,
-        borderRight: 1,
-        borderBottom: 1,
-        borderColor: 'neutral.lighter',
+        border: 1,
+        borderColor: 'info.main',
+        borderRadius: 1.5,
+        maxWidth: 300,
       }}
     >
       <Box position="relative" sx={{ cursor: 'pointer' }}>
@@ -48,6 +50,7 @@ const ProductCard = () => {
           alignItems="center"
           justifyContent="center"
           bgcolor="rgba(0, 0, 0, 0.5)"
+          borderRadius={1}
           sx={{
             opacity: 0,
             transition: 'all 0.2s ease-in-out',
@@ -69,7 +72,7 @@ const ProductCard = () => {
 
       <CardContent>
         <Stack spacing={1} direction="column" alignItems="center" justifyContent="center">
-          <Typography variant="h6" color="primary.dark">
+          <Typography component={Link} href="#!" variant="h6" color="primary.dark" fontWeight={600}>
             Chinese cabbage
           </Typography>
           <Stack alignItems="center" gap={1}>
@@ -80,24 +83,24 @@ const ProductCard = () => {
               precision={0.5}
               readOnly
             />
-            <Typography variant="body2" color="primary.dark" fontWeight={600}>
+            <Typography variant="body2" color="neutral.lighter" fontWeight={500}>
               (4.2k)
             </Typography>
           </Stack>
-          <Typography variant="subtitle2" color="primary.dark">
+          <Typography variant="subtitle2" color="neutral.lighter">
             1 kg
           </Typography>
           <Stack spacing={1} alignItems="center">
             <Typography
               component="ins"
-              variant="h5"
-              color="success.dark"
+              variant="h6"
+              fontWeight={600}
               sx={{ textDecoration: 'none' }}
             >
-              60$
+              $60
             </Typography>
-            <Typography component="del" variant="body1" color="info.main" fontWeight={700}>
-              80$
+            <Typography component="del" variant="h6" color="neutral.lighter" fontWeight={500}>
+              $80
             </Typography>
           </Stack>
         </Stack>
@@ -109,6 +112,7 @@ const ProductCard = () => {
             variant="contained"
             size="medium"
             startIcon={<IconifyIcon icon="bi:lightning-fill" />}
+            sx={{ border: 'none' }}
             fullWidth
           >
             Add To Cart
@@ -128,7 +132,7 @@ const ProductCard = () => {
               variant="text"
               sx={{
                 color: 'neutral.dark',
-                fontWeight: 700,
+                fontWeight: 500,
                 borderLeft: 1,
                 borderRight: 1,
                 borderColor: 'neutral.light',

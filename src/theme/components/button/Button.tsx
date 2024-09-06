@@ -43,7 +43,7 @@ const Button: Components<Omit<Theme, 'components'>>['MuiButton'] = {
       fontSize: theme.typography.caption.fontSize,
     }),
     startIcon: {
-      marginRight: 12,
+      marginRight: 5,
     },
     endIcon: {
       marginLeft: 12,
