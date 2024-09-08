@@ -13,7 +13,7 @@ import CabbageImage from 'assets/images/cabbage.png';
 import { Link } from '@mui/material';
 
 const ProductCard = () => {
-  const addedToCart = false;
+  const addedToCart = true;
 
   return (
     <Card
@@ -61,7 +61,7 @@ const ProductCard = () => {
         >
           <Typography
             variant="h5"
-            color="primary.lighter"
+            color="info.lighter"
             fontWeight={400}
             sx={{ userSelect: 'none' }}
           >
@@ -119,31 +119,35 @@ const ProductCard = () => {
           </Button>
         ) : (
           <Stack
+            spacing={1.5}
             width={1}
             alignItems="center"
             justifyContent="space-between"
-            bgcolor="neutral.lighter"
             borderRadius={0.5}
           >
-            <IconButton size="medium" sx={{ p: 1.175, bgcolor: 'transparent !important' }}>
-              <IconifyIcon icon="mingcute:minimize-line" color="neutral.dark" />
+            <IconButton
+              size="large"
+              sx={{ bgcolor: 'primary.main', '&:hover': { bgcolor: 'primary.main' } }}
+            >
+              <IconifyIcon icon="mingcute:minimize-line" color="info.lighter" />
             </IconButton>
             <Button
               variant="text"
-              sx={{
-                color: 'neutral.dark',
+              sx={(theme) => ({
                 fontWeight: 500,
-                borderLeft: 1,
-                borderRight: 1,
-                borderColor: 'neutral.light',
-              }}
+                color: 'neutral.dark',
+                bgcolor: `${theme.palette.info.main} !important`,
+              })}
               fullWidth
               disableRipple
             >
               10 in Cart
             </Button>
-            <IconButton size="medium" sx={{ p: 1.25, bgcolor: 'transparent !important' }}>
-              <IconifyIcon icon="mingcute:add-line" color="neutral.dark" />
+            <IconButton
+              size="large"
+              sx={{ bgcolor: 'primary.main', '&:hover': { bgcolor: 'primary.main' } }}
+            >
+              <IconifyIcon icon="mingcute:add-line" color="info.lighter" />
             </IconButton>
           </Stack>
         )}
