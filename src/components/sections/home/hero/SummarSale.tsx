@@ -2,11 +2,11 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import IconifyIcon from 'components/base/IconifyIcon';
 import Bannar from 'components/common/Bannar';
-import bannarImage from 'assets/images/backgrounds/summar-sale.png';
+import { SummerSaleBg } from 'data/images';
 
 const SummarSale = () => {
   return (
-    <Bannar bgImage={bannarImage} sx={{ flexGrow: 1, p: 3.5 }}>
+    <Bannar bgImage={SummerSaleBg} sx={{ flexGrow: 1, p: 3.5 }}>
       <Typography variant="body2" textTransform="uppercase" fontWeight={500} letterSpacing={0.5}>
         Summer Sale
       </Typography>

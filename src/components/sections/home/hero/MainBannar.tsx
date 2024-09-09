@@ -5,11 +5,11 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Bannar from 'components/common/Bannar';
 import IconifyIcon from 'components/base/IconifyIcon';
-import heroImage from 'assets/images/backgrounds/hero.png';
+import { HeroBg } from 'data/images';
 
 const MainBannar = () => {
   return (
-    <Bannar bgImage={heroImage} sx={{ p: { xs: 3.5, md: 7 }, flex: 2, height: 600 }}>
+    <Bannar bgImage={HeroBg} sx={{ p: { xs: 3.5, md: 7 }, flex: 2, height: 600 }}>
       <Stack direction="column" justifyContent="center" height={1} spacing={3.5}>
         <Typography variant="h1" color="info.lighter" lineHeight={1.25} fontWeight={600}>
           Fresh & Healthy <br />

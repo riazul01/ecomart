@@ -2,12 +2,12 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import IconifyIcon from 'components/base/IconifyIcon';
 import Bannar from 'components/common/Bannar';
-import bannarImage from 'assets/images/backgrounds/best-deal.png';
+import { BestDealBg } from 'data/images';
 
 const BestDeal = () => {
   return (
     <Bannar
-      bgImage={bannarImage}
+      bgImage={BestDealBg}
       sx={{
         flexGrow: 1,
         display: 'flex',

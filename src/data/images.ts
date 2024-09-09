@@ -11,7 +11,20 @@ import diabetic from 'assets/images/categories/diabetic.png';
 import detergents from 'assets/images/categories/detergents.png';
 import oil from 'assets/images/categories/oil.png';
 
+import HeroBg from 'assets/images/backgrounds/hero.png';
+import SummerSaleBg from 'assets/images/backgrounds/summer-sale.png';
+import BestDealBg from 'assets/images/backgrounds/best-deal.png';
+import VegetablesBg from 'assets/images/backgrounds/vegetables.png';
+import FruitsBg from 'assets/images/backgrounds/fruits.png';
+import MeatBg from 'assets/images/backgrounds/meat.png';
+
 export {
+  HeroBg,
+  SummerSaleBg,
+  BestDealBg,
+  VegetablesBg,
+  FruitsBg,
+  MeatBg,
   fruits,
   vegetables,
   meatFish,
