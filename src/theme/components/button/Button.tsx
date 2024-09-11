@@ -7,26 +7,22 @@ const Button: Components<Omit<Theme, 'components'>>['MuiButton'] = {
   },
   styleOverrides: {
     root: ({ theme }) => ({
-      border: 1,
       fontWeight: 500,
-      borderStyle: 'solid',
+      border: 'none !important',
       borderRadius: theme.shape.borderRadius * 12,
       textTransform: 'initial',
     }),
     text: ({ theme }) => ({
       color: theme.palette.primary.main,
       backgroundColor: 'transparent !important',
-      borderColor: 'transparent',
     }),
     containedPrimary: ({ theme }) => ({
       color: theme.palette.info.lighter,
-      borderColor: theme.palette.primary.main,
       backgroundColor: theme.palette.primary.main,
       '&:hover': { backgroundColor: theme.palette.primary.main },
     }),
     containedSecondary: ({ theme }) => ({
       color: theme.palette.primary.main,
-      borderColor: theme.palette.info.lighter,
       backgroundColor: theme.palette.info.lighter,
       '&:hover': { backgroundColor: theme.palette.info.lighter },
     }),
