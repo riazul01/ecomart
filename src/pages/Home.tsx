@@ -5,6 +5,7 @@ import FeaturedProducts from 'components/sections/home/featured-products';
 import FeaturedServices from 'components/sections/home/featured-services';
 import Hero from 'components/sections/home/hero';
 import DiscountBannar from 'components/sections/home/discount-bannar';
+import Blogs from 'components/sections/home/blogs';
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         <FeaturedProducts />
         <BannarGroup />
         <DiscountBannar />
+        <Blogs />
       </Box>
     </>
   );
