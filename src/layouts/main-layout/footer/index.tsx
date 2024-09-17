@@ -1,154 +1,12 @@
-import { Stack, Box, ButtonBase, Link, Typography } from '@mui/material';
+import { paymentMethods } from 'data/paymentMethods';
+import { footerLinks } from 'data/footerLinks';
+import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
+import Stack from '@mui/material/Stack';
+import ButtonBase from '@mui/material/ButtonBase';
+import Typography from '@mui/material/Typography';
 import Image from 'components/base/Image';
 import Logo from 'assets/images/logo.png';
-import { visa, mastercard, discover, applepay, cart } from 'data/images';
-
-interface FooterLink {
-  id: number;
-  title: string;
-  link: string;
-}
-
-interface FooterSection {
-  id: number | string;
-  subheader: string;
-  links: FooterLink[];
-}
-
-const footerLinks: FooterSection[] = [
-  {
-    id: 1,
-    subheader: 'My Account',
-    links: [
-      {
-        id: 1,
-        title: 'My Account',
-        link: '#!',
-      },
-      {
-        id: 2,
-        title: 'Order History',
-        link: '#!',
-      },
-      {
-        id: 3,
-        title: 'Shoping Cart',
-        link: '#!',
-      },
-      {
-        id: 4,
-        title: 'Wishlist',
-        link: '#!',
-      },
-    ],
-  },
-  {
-    id: 2,
-    subheader: 'Categories',
-    links: [
-      {
-        id: 1,
-        title: 'Fruit & Vegetables',
-        link: '#!',
-      },
-      {
-        id: 2,
-        title: 'Meat & Fish',
-        link: '#!',
-      },
-      {
-        id: 3,
-        title: 'Bread & Bakery',
-        link: '#!',
-      },
-      {
-        id: 4,
-        title: 'Beauty & Health',
-        link: '#!',
-      },
-    ],
-  },
-  {
-    id: 3,
-    subheader: 'Quick Links',
-    links: [
-      {
-        id: 1,
-        title: 'About Us',
-        link: '#!',
-      },
-      {
-        id: 2,
-        title: 'Latest Blogs',
-        link: '#!',
-      },
-      {
-        id: 3,
-        title: 'New Offers',
-        link: '#!',
-      },
-      {
-        id: 4,
-        title: 'FAQs',
-        link: '#!',
-      },
-    ],
-  },
-  {
-    id: 4,
-    subheader: 'Helps',
-    links: [
-      {
-        id: 1,
-        title: 'Contact',
-        link: '#!',
-      },
-      {
-        id: 2,
-        title: 'Refund Policies',
-        link: '#!',
-      },
-      {
-        id: 3,
-        title: 'Terms & Condition',
-        link: '#!',
-      },
-      {
-        id: 4,
-        title: 'Privacy Policy',
-        link: '#!',
-      },
-    ],
-  },
-];
-
-export const payments = [
-  {
-    id: 1,
-    image: visa,
-    link: '#!',
-  },
-  {
-    id: 2,
-    image: mastercard,
-    link: '#!',
-  },
-  {
-    id: 3,
-    image: discover,
-    link: '#!',
-  },
-  {
-    id: 4,
-    image: applepay,
-    link: '#!',
-  },
-  {
-    id: 5,
-    image: cart,
-    link: '#!',
-  },
-];
 
 const Footer = () => {
   return (
@@ -172,6 +30,8 @@ const Footer = () => {
             <Stack mt={3} spacing={2}>
               <Typography
                 variant="body1"
+                component={Link}
+                href="tel:+8801234567890"
                 color="info.lighter"
                 fontWeight={500}
                 borderBottom={2}
@@ -184,12 +44,14 @@ const Footer = () => {
               </Typography>
               <Typography
                 variant="body1"
+                component={Link}
+                href="mailto:ecomart@mail.com"
                 color="info.lighter"
                 fontWeight={500}
                 borderBottom={2}
                 borderColor="primary.main"
               >
-                ecomart@gmail.com
+                ecomart@mail.com
               </Typography>
             </Stack>
           </Box>
@@ -236,7 +98,7 @@ const Footer = () => {
           </Typography>
 
           <Stack spacing={1} alignItems="center">
-            {payments.map((item) => (
+            {paymentMethods.map((item) => (
               <Stack key={item.id} component={Link} href={item.link} alignItems="center">
                 <Image src={item.image} height={30} />
               </Stack>
