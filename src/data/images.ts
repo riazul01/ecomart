@@ -18,6 +18,12 @@ import VegetablesBg from 'assets/images/backgrounds/vegetables.png';
 import FruitsBg from 'assets/images/backgrounds/fruits.png';
 import MeatBg from 'assets/images/backgrounds/meat.png';
 
+import visa from 'assets/images/payment/visa.png';
+import mastercard from 'assets/images/payment/mastercard.png';
+import discover from 'assets/images/payment/discover.png';
+import applepay from 'assets/images/payment/applepay.png';
+import cart from 'assets/images/payment/cart.png';
+
 export {
   HeroBg,
   SummerSaleBg,
@@ -37,4 +43,9 @@ export {
   diabetic,
   detergents,
   oil,
+  visa,
+  mastercard,
+  discover,
+  applepay,
+  cart,
 };

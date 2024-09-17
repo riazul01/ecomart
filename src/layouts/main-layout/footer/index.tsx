@@ -1,6 +1,7 @@
 import { Stack, Box, ButtonBase, Link, Typography } from '@mui/material';
 import Image from 'components/base/Image';
 import Logo from 'assets/images/logo.png';
+import { visa, mastercard, discover, applepay, cart } from 'data/images';
 
 interface FooterLink {
   id: number;
@@ -121,72 +122,129 @@ const footerLinks: FooterSection[] = [
   },
 ];
 
+export const payments = [
+  {
+    id: 1,
+    image: visa,
+    link: '#!',
+  },
+  {
+    id: 2,
+    image: mastercard,
+    link: '#!',
+  },
+  {
+    id: 3,
+    image: discover,
+    link: '#!',
+  },
+  {
+    id: 4,
+    image: applepay,
+    link: '#!',
+  },
+  {
+    id: 5,
+    image: cart,
+    link: '#!',
+  },
+];
+
 const Footer = () => {
   return (
-    <Stack py={4} width={1} bgcolor="neutral.dark">
-      <Stack mx="auto" px={1.5} width={1} maxWidth={1340}>
-        <Box flex={2}>
-          <ButtonBase component={Link} href="/" disableRipple>
-            <Image src={Logo} height={32} width={32} />
-            <Typography ml={1.25} variant="h3" color="info.lighter" fontWeight={500}>
-              Ecomart
-            </Typography>
-          </ButtonBase>
+    <Box width={1} bgcolor="neutral.dark">
+      <Box px={1.5} mx="auto" width={1} maxWidth={1340}>
+        <Stack py={4} justifyContent="space-between">
+          <Box flex={2}>
+            <ButtonBase component={Link} href="/" disableRipple>
+              <Image src={Logo} height={32} width={32} />
+              <Typography ml={1.25} variant="h3" color="info.lighter" fontWeight={500}>
+                Ecomart
+              </Typography>
+            </ButtonBase>
 
-          <Typography mt={2} variant="body2" color="neutral.lighter">
-            Welcome to Ecomart! Find quality groceries, <br />
-            fresh produce, and pantry staples with fast delivery <br /> and excellent service. Shop
-            with ease today!
+            <Typography mt={2} variant="body2" color="neutral.lighter">
+              Welcome to Ecomart! Find quality groceries, <br />
+              fresh produce, and pantry staples with fast delivery <br /> and excellent service.
+              Shop with ease today!
+            </Typography>
+
+            <Stack mt={3} spacing={2}>
+              <Typography
+                variant="body1"
+                color="info.lighter"
+                fontWeight={500}
+                borderBottom={2}
+                borderColor="primary.main"
+              >
+                (219) 555-0114
+              </Typography>
+              <Typography variant="body1" color="neutral.lighter">
+                or
+              </Typography>
+              <Typography
+                variant="body1"
+                color="info.lighter"
+                fontWeight={500}
+                borderBottom={2}
+                borderColor="primary.main"
+              >
+                ecomart@gmail.com
+              </Typography>
+            </Stack>
+          </Box>
+
+          {footerLinks.map((item) => (
+            <Box flex={1}>
+              <Typography mb={2} variant="body1" color="info.lighter" fontWeight={500}>
+                {item.subheader}
+              </Typography>
+              {item.links.map((item) => (
+                <Typography
+                  key={item.id}
+                  mb={1.5}
+                  variant="body2"
+                  component={Link}
+                  href={item.link}
+                  display="block"
+                  color="neutral.lighter"
+                  sx={{ transition: 'all 0.3s ease', '&:hover': { color: 'info.main' } }}
+                >
+                  {item.title}
+                </Typography>
+              ))}
+            </Box>
+          ))}
+        </Stack>
+
+        <Stack
+          py={2}
+          alignItems="center"
+          justifyContent="space-between"
+          borderTop={1}
+          sx={{ borderColor: 'neutral.main' }}
+        >
+          <Typography variant="body2" color="neutral.lighter">
+            &copy; 2024 Ecomart. Created by{' '}
+            <Typography
+              component={Link}
+              href="https://github.com/riazul01"
+              sx={{ textDecoration: 'underline' }}
+            >
+              riazul01
+            </Typography>
           </Typography>
 
-          <Stack mt={3} spacing={2}>
-            <Typography
-              variant="body1"
-              color="info.lighter"
-              fontWeight={500}
-              borderBottom={2}
-              borderColor="primary.main"
-            >
-              (219) 555-0114
-            </Typography>
-            <Typography variant="body1" color="neutral.lighter">
-              or
-            </Typography>
-            <Typography
-              variant="body1"
-              color="info.lighter"
-              fontWeight={500}
-              borderBottom={2}
-              borderColor="primary.main"
-            >
-              ecomart@gmail.com
-            </Typography>
-          </Stack>
-        </Box>
-
-        {footerLinks.map((item) => (
-          <Box flex={1}>
-            <Typography mb={2} variant="body1" color="info.lighter" fontWeight={500}>
-              {item.subheader}
-            </Typography>
-            {item.links.map((item) => (
-              <Typography
-                key={item.id}
-                mb={1.5}
-                variant="body2"
-                component={Link}
-                href={item.link}
-                display="block"
-                color="neutral.lighter"
-                sx={{ transition: 'all 0.3s ease', '&:hover': { color: 'info.main' } }}
-              >
-                {item.title}
-              </Typography>
+          <Stack spacing={1} alignItems="center">
+            {payments.map((item) => (
+              <Stack key={item.id} component={Link} href={item.link} alignItems="center">
+                <Image src={item.image} height={30} />
+              </Stack>
             ))}
-          </Box>
-        ))}
-      </Stack>
-    </Stack>
+          </Stack>
+        </Stack>
+      </Box>
+    </Box>
   );
 };
 
