@@ -6,7 +6,6 @@ import FeaturedServices from 'components/sections/home/featured-services';
 import Hero from 'components/sections/home/hero';
 import DiscountBannar from 'components/sections/home/discount-bannar';
 import Blogs from 'components/sections/home/blogs';
-import Newsletter from 'components/sections/home/newsletter';
 
 const Home = () => {
   return (
@@ -19,7 +18,6 @@ const Home = () => {
         <BannarGroup />
         <DiscountBannar />
         <Blogs />
-        <Newsletter />
       </Box>
     </>
   );

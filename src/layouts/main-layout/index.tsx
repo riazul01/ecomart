@@ -5,6 +5,7 @@ import Topbar from './topbar';
 import Header from './header';
 import Navbar from './navbar';
 import Footer from './footer';
+import Newsletter from './newsletter';
 
 const MainLayout = ({ children }: PropsWithChildren) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -29,7 +30,8 @@ const MainLayout = ({ children }: PropsWithChildren) => {
         <Header />
         <Navbar toggleDrawer={toggleDrawer} />
         {children}
-        <Footer/>
+        <Newsletter />
+        <Footer />
       </Stack>
     </Stack>
   );
