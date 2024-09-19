@@ -4,9 +4,9 @@ import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
-import Typography from '@mui/material/Typography';
 import IconifyIcon from 'components/base/IconifyIcon';
 import CabbageImage from 'assets/images/cabbage.png';
 
@@ -22,7 +22,7 @@ const BlogCard = () => {
         maxWidth: 350,
       }}
     >
-      <Box position="relative" sx={{ cursor: 'pointer' }}>
+      <Box position="relative">
         <CardMedia component="img" height={250} image={CabbageImage} alt="product_image" />
         <Stack
           direction="column"
@@ -31,10 +31,10 @@ const BlogCard = () => {
           alignItems="center"
           justifyContent="center"
           position="absolute"
-          bottom={2}
-          left={2}
+          bottom={8}
+          left={8}
           borderRadius={1}
-          bgcolor="info.dark"
+          bgcolor="info.main"
         >
           <Typography variant="h4" fontWeight={600}>
             18
@@ -45,7 +45,7 @@ const BlogCard = () => {
         </Stack>
       </Box>
 
-      <CardContent>
+      <CardContent sx={{ padding: 1 }}>
         <Stack spacing={2} alignItems="center">
           <Stack spacing={0.5} alignItems="center">
             <IconifyIcon icon="ph:tag" color="text.disabled" />
@@ -79,8 +79,11 @@ const BlogCard = () => {
       <CardActions>
         <Button
           variant="text"
+          LinkComponent={Link}
+          href="#!"
           size="medium"
           endIcon={<IconifyIcon icon="fluent:arrow-right-32-filled" />}
+          sx={{ ml: -2 }}
         >
           Read now
         </Button>
