@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Stack, Box, Typography } from '@mui/material';
 import BlogCard from './BlogCard';
 
 const Blogs = () => {
@@ -12,9 +12,9 @@ const Blogs = () => {
         grocery shopping and healthy eating experience.
       </Typography>
 
-      <Box>
+      <Stack mt={5} spacing={1} justifyContent="space-between">
         <BlogCard />
-      </Box>
+      </Stack>
     </Box>
   );
 };
