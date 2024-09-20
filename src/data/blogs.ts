@@ -1,4 +1,6 @@
-interface Blog {
+import { blog1, blog2, blog3 } from 'data/images';
+
+export interface Blog {
   id: number | string;
   title: string;
   image: string;
@@ -7,37 +9,38 @@ interface Blog {
   comments: number;
   publishDate: string;
   link: string;
+  desc?: string;
 }
 
 export const blogs: Blog[] = [
   {
     id: 1,
     title: 'Understanding Food Labels: What to Look For',
-    image: '',
+    image: blog1,
     tags: ['Food', 'Healthy'],
     author: 'Admin',
     comments: 65,
-    publishDate: '18 Nov, 2024',
+    publishDate: '18 Nov 2024',
     link: '#!',
   },
   {
     id: 6,
-    title: 'How to Stay Hydrated Throughout the Day',
-    image: '',
+    title: 'Effective Tips for Staying Well Hydrated All Day Long',
+    image: blog2,
     tags: ['Hydration', 'Wellness'],
-    author: 'Sarah Johnson',
+    author: 'Admin',
     comments: 22,
-    publishDate: '9 Nov, 2024',
+    publishDate: '16 Nov 2024',
     link: '#!',
   },
   {
     id: 4,
     title: 'Meal Prepping Tips for Busy Professionals',
-    image: '',
+    image: blog3,
     tags: ['Meal Prep', 'Lifestyle'],
     author: 'Admin',
     comments: 30,
-    publishDate: '12 Nov, 2024',
+    publishDate: '15 Nov 2024',
     link: '#!',
   },
   {
@@ -47,7 +50,7 @@ export const blogs: Blog[] = [
     tags: ['Diet', 'Vegan'],
     author: 'John Doe',
     comments: 120,
-    publishDate: '17 Nov, 2024',
+    publishDate: '12 Nov, 2024',
     link: '#!',
   },
   {

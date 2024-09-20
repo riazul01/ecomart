@@ -24,6 +24,10 @@ import discover from 'assets/images/payment/discover.png';
 import applepay from 'assets/images/payment/applepay.png';
 import cart from 'assets/images/payment/cart.png';
 
+import blog1 from 'assets/images/blogs/blog01.jpg';
+import blog2 from 'assets/images/blogs/blog02.jpg';
+import blog3 from 'assets/images/blogs/blog03.jpg';
+
 export {
   HeroBg,
   SummerSaleBg,
@@ -48,4 +52,7 @@ export {
   discover,
   applepay,
   cart,
+  blog1,
+  blog2,
+  blog3,
 };
