@@ -1,12 +1,17 @@
 import Bannar from 'components/common/Bannar';
-import bannarImg from 'assets/images/backgrounds/discount.png';
-import { Box, Typography, Button } from '@mui/material';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 import IconifyIcon from 'components/base/IconifyIcon';
+import { discountBannar } from 'data/images';
 
 const DiscountBannar = () => {
   return (
-    <Bannar bgImage={bannarImg} sx={{ display: 'flex', alignItems: 'center', height: 320 }}>
-      <Box ml="auto" width={1} maxWidth={420}>
+    <Bannar
+      bgImage={discountBannar}
+      sx={{ mb: 8, display: 'flex', alignItems: 'center', height: 320 }}
+    >
+      <Box ml="auto" width={1} maxWidth={440}>
         <Typography variant="body2" color="info.lighter" textTransform="uppercase">
           Summer Sale
         </Typography>

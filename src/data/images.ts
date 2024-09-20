@@ -28,6 +28,8 @@ import blog1 from 'assets/images/blogs/blog01.jpg';
 import blog2 from 'assets/images/blogs/blog02.jpg';
 import blog3 from 'assets/images/blogs/blog03.jpg';
 
+import discountBannar from 'assets/images/backgrounds/discount.png';
+
 export {
   HeroBg,
   SummerSaleBg,
@@ -55,4 +57,5 @@ export {
   blog1,
   blog2,
   blog3,
+  discountBannar,
 };
