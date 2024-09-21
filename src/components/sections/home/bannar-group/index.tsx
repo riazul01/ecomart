@@ -3,7 +3,7 @@ import BestDeals from './BestDeals';
 
 const BannarGroup = () => {
   return (
-    <Stack justifyContent="space-between">
+    <Stack mb={8} justifyContent="space-between">
       <BestDeals />
     </Stack>
   );
