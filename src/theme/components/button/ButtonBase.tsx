@@ -6,11 +6,7 @@ const ButtonBase: Components<Omit<Theme, 'components'>>['MuiButtonBase'] = {
     disableRipple: false,
   },
   styleOverrides: {
-    root: {
-      '&:hover': {
-        background: 'transparent',
-      },
-    },
+    root: {},
   },
 };
 

@@ -2,11 +2,12 @@ import { useRef, useState } from 'react';
 import { Swiper as SwiperClass } from 'swiper/types';
 import { SwiperSlide } from 'swiper/react';
 import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
 import ReactSwiper from 'components/base/ReactSwiper';
 import IconifyIcon from 'components/base/IconifyIcon';
 import useResizeObserver from 'hooks/useResizeObserver';
+import { ButtonBase } from '@mui/material';
 
 interface HasId {
   id: string | number;
@@ -38,46 +39,60 @@ const ProductSlider = <T extends HasId>({ title, SliderCard, data }: ProductSlid
   };
 
   return (
-    <Stack mb={8} ref={containerRef} direction="column" spacing={1.75} width={1}>
-      <Stack alignItems="center" justifyContent="space-between">
-        <Typography variant="h4">{title}</Typography>
-        <Stack mr={-1} alignItems="center" justifyContent="center">
-          <IconButton
+    <Box mb={8} ref={containerRef} width={1}>
+      <Stack mb={3} alignItems="center" justifyContent="space-between">
+        <Typography variant="h4" fontWeight={600}>
+          {title}
+        </Typography>
+
+        <Stack spacing={2} alignItems="center" justifyContent="center">
+          <Stack
+            component={ButtonBase}
             onClick={handlePrev}
-            size="large"
+            alignItems="center"
+            justifyContent="center"
+            height={42}
+            width={42}
+            bgcolor={isSlideBegin ? 'info.dark' : 'primary.main'}
+            borderRadius="25%"
             sx={{
-              p: 1,
-              border: 'none',
-              bgcolor: 'transparent !important',
               pointerEvents: isSlideBegin ? 'none' : 'auto',
+              opacity: isSlideBegin ? 0.5 : 1,
             }}
           >
             <IconifyIcon
-              icon="oui:arrow-left"
-              color={isSlideBegin ? 'text.secondary' : 'text.primary'}
+              icon="fluent:arrow-left-32-filled"
+              color={isSlideBegin ? 'text.primary' : 'info.lighter'}
+              fontSize="h5.fontSize"
             />
-          </IconButton>
-          <IconButton
+          </Stack>
+
+          <Stack
+            component={ButtonBase}
             onClick={handleNext}
-            size="large"
+            alignItems="center"
+            justifyContent="center"
+            height={42}
+            width={42}
+            bgcolor={isSlideEnd ? 'info.dark' : 'primary.main'}
+            borderRadius="25%"
             sx={{
-              p: 1,
-              border: 'none',
-              bgcolor: 'transparent !important',
               pointerEvents: isSlideEnd ? 'none' : 'auto',
+              opacity: isSlideEnd ? 0.5 : 1,
             }}
           >
             <IconifyIcon
-              icon="oui:arrow-right"
-              color={isSlideEnd ? 'text.secondary' : 'text.primary'}
+              icon="fluent:arrow-right-32-filled"
+              color={isSlideEnd ? 'text.primary' : 'info.lighter'}
+              fontSize="h5.fontSize"
             />
-          </IconButton>
+          </Stack>
         </Stack>
       </Stack>
 
       <ReactSwiper
         slidesPerView={
-          containerSize > 1440 ? 4 : containerSize > 1024 ? 3 : containerSize > 720 ? 2 : 1
+          containerSize > 1300 ? 4 : containerSize > 1024 ? 3 : containerSize > 720 ? 2 : 1
         }
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
@@ -96,7 +111,7 @@ const ProductSlider = <T extends HasId>({ title, SliderCard, data }: ProductSlid
           </SwiperSlide>
         ))}
       </ReactSwiper>
-    </Stack>
+    </Box>
   );
 };
 

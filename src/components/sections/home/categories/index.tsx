@@ -7,7 +7,7 @@ import { categories } from 'data/categories';
 
 const Categories = () => {
   return (
-    <Box mt={5}>
+    <Box mb={8}>
       <SectionHeader title="Popular Categories" path="#!" linkText="View All" />
 
       <Grid container spacing={2}>
