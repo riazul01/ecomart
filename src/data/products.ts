@@ -12,6 +12,7 @@ export interface ProductData {
   image: string;
   desc: string;
   category: string;
+  subCategory: string;
   tags: string[];
   inStock: boolean;
   stockCount: number;
@@ -32,6 +33,7 @@ const product: ProductData = {
   image: CabbageImage,
   desc: '',
   category: 'vegetables',
+  subCategory: 'featured',
   tags: ['vegetable', 'green', 'organic'],
   inStock: true,
   stockCount: 1200,
