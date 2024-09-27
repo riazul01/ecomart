@@ -22,6 +22,10 @@ const Chip: Components<Omit<Theme, 'components'>>['MuiChip'] = {
     colorPrimary: ({ theme }) => ({
       backgroundColor: theme.palette.primary.main,
     }),
+    colorSecondary: ({ theme }) => ({
+      color: theme.palette.warning.main,
+      backgroundColor: theme.palette.neutral.dark,
+    }),
     colorSuccess: ({ theme }) => ({
       backgroundColor: theme.palette.success.main,
     }),

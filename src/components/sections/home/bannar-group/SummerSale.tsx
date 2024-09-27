@@ -1,4 +1,4 @@
-import { Typography, Stack, Button } from '@mui/material';
+import { Typography, Stack, Button, Chip } from '@mui/material';
 import Bannar from 'components/common/Bannar';
 import { FruitsBg } from 'data/images';
 import IconifyIcon from 'components/base/IconifyIcon';
@@ -16,14 +16,14 @@ const SummerSale = () => {
         100% Fresh Fruit
       </Typography>
 
-      <Typography mt={2} variant="h5" color="info.lighter" textAlign="center" fontWeight={400}>
-        Started at{' '}
-        <Typography component="span" variant="h5" color="warning.main" fontWeight={600}>
-          $79.99
+      <Stack mt={2} spacing={1.25} alignItems="center" justifyContent="center">
+        <Typography variant="h6" fontWeight={500}>
+          Up to
         </Typography>
-      </Typography>
+        <Chip label="60% OFF" size="medium" color="secondary" />
+      </Stack>
 
-      <Stack mt={4} justifyContent="center">
+      <Stack mt={3.5} justifyContent="center">
         <Button
           variant="contained"
           color="secondary"
