@@ -5,7 +5,7 @@ import ProductCard from 'components/common/ProductCard';
 
 const FeaturedProducts = () => {
   return (
-    <>
+    <Box mb={8}>
       <Stack mb={2.25} justifyContent="space-between" alignItems="center">
         <Typography variant="h4" fontWeight={600}>
           Featured Products
@@ -15,7 +15,7 @@ const FeaturedProducts = () => {
       <Box>
         <ProductCard />
       </Box>
-    </>
+    </Box>
   );
 };
 
