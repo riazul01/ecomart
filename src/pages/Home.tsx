@@ -7,6 +7,7 @@ import Hero from 'components/sections/home/hero';
 import DiscountBannar from 'components/sections/home/discount-bannar';
 import Blogs from 'components/sections/home/blogs';
 import PopularProducts from 'components/sections/home/popular-products';
+import DealsOfTheWeek from 'components/sections/home/deals-of-the-week';
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
         <FeaturedProducts />
         <PopularProducts />
         <BannarGroup />
+        <DealsOfTheWeek />
         <DiscountBannar />
         <Blogs />
       </Box>
