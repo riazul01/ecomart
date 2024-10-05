@@ -6,6 +6,7 @@ import FeaturedServices from 'components/sections/home/featured-services';
 import Hero from 'components/sections/home/hero';
 import DiscountBannar from 'components/sections/home/discount-bannar';
 import Blogs from 'components/sections/home/blogs';
+import PopularProducts from 'components/sections/home/popular-products';
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <FeaturedServices />
         <Categories />
         <FeaturedProducts />
+        <PopularProducts />
         <BannarGroup />
         <DiscountBannar />
         <Blogs />
